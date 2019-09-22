@@ -14,10 +14,7 @@ window.onload = function() {
             console.log(JSON.parse(httpReq.responseText));
             httpResponse.innerText = httpReq.responseText;
         } else {
-            console.log('Error while fetching data from API Url');
-            console.log(httpReq.readyState);
-            console.log(httpReq.status);
-
+            console.log(`onreadystatechange changed - readyState: ${httpReq.readyState} - status: ${httpReq.status}`);
         }
     };
 
